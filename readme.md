@@ -1154,6 +1154,8 @@ This pipeline processes the documents and writes the results to the `texas_theat
 ![alt text](/assets/image-32.png)
 
 The `$out` stage will overwrite the `texas_theaters_summary` collection if it already exists. If it does not exist, MongoDB will create it.
+The `$out` stage is a destructive operation; it replaces all the data in the target collection if the collection already exists.
+The `$out` stage cannot be used in sharded clusters unless the output collection is unsharded.
 
 **[Back To Top ⬆ ](#indexing)**
 
